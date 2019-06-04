@@ -7,13 +7,7 @@ class Bomb extends Component {
     this.state = {secondsLeft: props.initialCount}
   }
   render() {
-    if (this.state.secondsLeft != 0) {
-      return (
-        <div>{this.state.secondsLeft} seconds left before I go boom!</div>
-      )
-    } else {
-      return <div>Boom!</div>
-    }
+    return this.state.secondsLeft != 0 ? <div>{this.state.secondsLeft} seconds left before I go boom!</div> : <div>Boom!</div>
   }
 }
 
